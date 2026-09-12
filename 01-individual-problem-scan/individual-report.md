@@ -1,244 +1,117 @@
 # 01 — Individual Problem Scan
 
-> Điền theo Phase 1 + Phase 2 trong `01-worksheet.md`. Tự scan trước, dùng AI sau để phản biện. Không copy ví dụ Weekly Report.
-
 ## Thông tin cá nhân
 
-- Họ và tên:
-- Mã học viên:
-- Vai trò / bối cảnh (VD: sinh viên năm X, intern PM, ...):
-- Công việc hằng tuần (3-5 gạch đầu dòng để soi problem):
+- Họ và tên: Bùi Đức Thông
+- Mã học viên: 2A202602931
+- Bối cảnh: Sinh viên năm 4; tham gia lab AI và làm project LLM cá nhân.
 
----
+> Thời lượng là ước lượng cá nhân để ưu tiên khảo sát, không phải số liệu đại diện cho toàn bộ người dùng.
 
-## Phase 1 — Scan 5+ problems (tối thiểu 5, khuyến khích 8-10)
+## Phase 1 — Scan problems
 
-**Cách điền:** mỗi dòng = việc gì + ai chịu + đo bằng gì. Cột `Dấu hiệu thật` bắt buộc có số: mất bao lâu (bấm giờ mấy lần), mấy lần/tuần, bao nhiêu người gặp, log/ticket/quote nào.
+| # | Lăng kính | Problem quan sát được | Ai chịu ảnh hưởng? | Dấu hiệu thật |
+|---:|---|---|---|---|
+| 1 | Tốn thời gian / AI có thể tốt hơn | Khi xe có cảnh báo hoặc vận hành bất thường, chủ xe phải tự tra mã lỗi, manual và mạng trước khi chọn hành động an toàn. | Chủ xe VinFast, CSKH, kỹ thuật viên | Candidate nhóm đã chọn; chưa có baseline người dùng Việt Nam. |
+| 2 | Lặp lại / Pain từ người khác | Nhiều cư dân phản ánh cùng một sự cố bằng các ticket riêng lẻ, làm ban quản lý khó thấy lịch sử vấn đề. | Cư dân, ban quản lý | Quan sát trong bối cảnh cư dân; chưa có ticket mẫu hay số lượng để xác nhận. |
+| 3 | Pain từ người khác | Khách không rõ tiện ích nào tính phí hoặc cách dùng thiết bị trong phòng. | Khách lưu trú, lễ tân | Trải nghiệm cá nhân: từng không rõ cà phê/mì có tính phí và cách dùng vòi nước. |
+| 4 | Tốn thời gian | Bắt đầu thử nghiệm LLM phải đọc README, paper và issue để xác định đúng dữ liệu, model, metric. | Sinh viên làm project LLM | Ước lượng 45–60 phút/lần, 1–2 lần/tuần ở giai đoạn thử nghiệm. |
+| 5 | Lặp lại | Dữ liệu từ nhiều nguồn có schema, encoding và nhãn khác nhau; kiểm tra/làm sạch lặp lại trước khi train. | Người làm project LLM | Ước lượng 30–45 phút/bộ dữ liệu. |
+| 6 | Tốn thời gian | Kết quả model nằm ở notebook, terminal và log rời rạc, khó biết run tốt nhất. | Nhóm lab | Ước lượng 15–20 phút/lần đối chiếu. |
+| 7 | AI có thể tốt hơn | Tài liệu kỹ thuật dài khiến tìm đúng điều kiện áp dụng và cách tái lập phương pháp chậm. | Sinh viên nghiên cứu AI | Ước lượng 30–60 phút/tài liệu dài. |
+| 8 | Lặp lại | Quyết định kỹ thuật nằm ở nhiều tin nhắn/tài liệu, nên phải tìm lại context trước khi tiếp tục task. | Thành viên nhóm lab | Ước lượng 10–15 phút/lần, thường khi handoff. |
 
-| # | Lăng kính (Lặp lại / Tốn thời gian / AI có thể tốt hơn / Pain từ người khác) | Problem quan sát được | Ai chịu ảnh hưởng? | Dấu hiệu thật (số + bằng chứng) |
-|---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
-| 9 | | | | |
-| 10 | | | | |
+**AI đã dùng ở Phase 1**
 
-> Gợi ý tự soi: tuần trước mất nhiều thời gian nhất vào việc gì? Việc gì hay trì hoãn? Người khác hay hỏi lại câu gì? Workflow nào ai cũng biết là chậm?
-
-**AI đã dùng ở Phase 1 (nếu có):**
-- Prompt đã hỏi:
-- Ý dùng được:
-- Ý bỏ vì không phải pain thật:
-
-**Self-check Phase 1:**
-- [ ] Đủ 5+ dòng, mỗi dòng có actor + số đo cụ thể
-- [ ] Dùng ít nhất 3/4 lăng kính
-- [ ] Không có dòng chung chung kiểu "mất nhiều thời gian"
-
----
+- Prompt: hỏi AI gợi ý problem từ phản ánh cư dân Vinhomes theo bốn lăng kính.
+- Ý dùng được: workflow tiếp nhận → chuẩn hóa → nối sự cố tương tự → tổng hợp cho ban quản lý.
+- Ý bỏ: gợi ý cần ticket/dữ liệu nội bộ mà chưa có quyền truy cập hoặc evidence.
 
 ## Phase 2 — Top 3 Problem Cards
 
-### 2.1. Chọn top 3
+| Rank | Problem | Vì sao chọn | Điều chưa chắc |
+|---:|---|---|---|
+| 1 | Hỗ trợ chủ xe VinFast khi có cảnh báo/lỗi | Actor và trigger rõ; có thể so sánh Rule/Workflow/Agent. | Pain, baseline và khoảng trống so với app hiện tại cần phỏng vấn 2–3 chủ xe. |
+| 2 | Nối ticket sự cố lặp lại trong khu đô thị | Có thể đo triage và thấy pattern thay vì xử lý từng ticket. | Chưa có ticket mẫu hay baseline. |
+| 3 | Giải đáp tiện ích trong phòng khách sạn | Bối cảnh và thời điểm cần thông tin cụ thể; dễ pilot. | FAQ/nhãn rõ có thể đã đủ, chưa cần AI. |
 
-Giữ bài nào: actor cụ thể, workflow vẽ được 3-7 bước, bottleneck ở 1 bước, impact đo được. Loại bài quá rộng.
+### Problem Card #1 — Hỗ trợ chủ xe VinFast khi có cảnh báo/lỗi
 
-| Rank | Problem (copy từ bảng scan) | Vì sao chọn (2-3 ý) | Điều còn chưa chắc |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+**Problem 1 câu:** Khi xe xuất hiện cảnh báo hoặc vận hành bất thường, chủ xe VinFast khó hiểu mức độ nghiêm trọng, thu thập đủ thông tin và chọn hành động an toàn mà không phải tự tra nhiều nguồn hoặc mô tả lại cho kỹ thuật viên.
 
-### 2.2. Problem Cards chi tiết (lặp lại cho cả 3 cards)
-
----
-
-#### Problem Card #1 — [Tên problem]
-
-```text
-Problem 1 câu:
-
-Actor:
-
-Thời điểm / bối cảnh:
-
-Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
-
-Bottleneck:
-
-Impact:
-
-Success metric:
-
-Non-AI alternative:
-
-AI hypothesis:
-
-Quick gut:
-[ ] No AI / process fix
-[ ] Rule
-[ ] Workflow
-[ ] Agent
-[ ] Chưa biết
-```
-
-**Draft workflow Card #1** (ASCII / Mermaid / ảnh đính kèm):
+- **Actor:** Chủ xe; CSKH/kỹ thuật viên nhận handoff.
+- **Bối cảnh:** Ngay khi HMI/app hiện cảnh báo hoặc xe có biểu hiện bất thường.
+- **Current workflow:** (1) Nhận cảnh báo/bất thường → (2) xem HMI/app → (3) tra mã lỗi, manual, web → (4) chọn tự xử lý/đặt dịch vụ/cứu hộ → (5) mô tả lại → (6) kỹ thuật viên hỏi thêm và chẩn đoán.
+- **Bottleneck:** Bước 3 — người dùng phải nối mã lỗi, triệu chứng, manual và dịch vụ thành hành động an toàn.
+- **Impact:** Người dùng lo lắng, mô tả thiếu bối cảnh và kỹ thuật viên phải hỏi lại.
+- **Success metric:** Sau khi có baseline pilot, giảm ≥50% thời gian từ cảnh báo đến hành động phù hợp và ≥50% lượt hỏi bổ sung; phân luồng ≥95%, không hạ mức bất kỳ case safety-critical nào.
+- **Non-AI alternative:** Cải thiện nội dung cảnh báo, decision tree cố định theo mã lỗi và FAQ/manual theo model.
+- **AI hypothesis:** Sau rule an toàn, AI chỉ truy xuất manual đúng model/version, giải thích, hỏi dữ kiện không nguy hiểm và tạo handoff có cấu trúc.
+- **Quick gut:** Workflow.
 
 ```text
-CURRENT STATE — ___ phút
+CURRENT — chưa có time-log
+[Cảnh báo] → [Xem HMI/app] → [Tra manual/web] ← bottleneck
+→ [Chọn hành động] → [Mô tả lại] → [Kỹ thuật viên chẩn đoán]
 
-[1 ...: __'] → [2 ...: __'] → [3 ...: __'] → [4 ...: __']  <-- bottleneck
+FUTURE — mục tiêu giảm ≥50% sau pilot
+[Đọc mã lỗi, read-only] → [Rule an toàn] → [Truy xuất manual đúng phiên bản]
+→ [AI giải thích + hỏi thêm] → [Chủ xe xác nhận] ← human boundary → [Handoff có cấu trúc]
 
-FUTURE STATE — ___ phút
-
-[1 ...: __'] → [2 ...: __'] → [3 ... review: __']  <-- human boundary
-
-Fallback: nếu AI sai thì ...
+Fallback: thiếu dữ liệu, confidence thấp, nguồn mâu thuẫn hoặc cảnh báo an toàn
+→ chuyển CSKH/kỹ thuật viên/cứu hộ ngay; không hướng dẫn tự xử lý.
 ```
 
-File đính kèm (nếu vẽ riêng): `01-individual-problem-scan-workflow-card-1.png`
+### Problem Card #2 — Nối ticket sự cố lặp lại trong khu đô thị
 
----
+**Problem 1 câu:** Khi nhiều cư dân phản ánh cùng một sự cố bằng cách diễn đạt khác nhau, ban quản lý khó nhận ra pattern và ưu tiên xử lý đúng mức.
 
-#### Problem Card #2 — [Tên problem]
+- **Actor:** Cư dân; nhân viên ban quản lý triage và điều phối.
+- **Bối cảnh:** Tiếp nhận ticket mới qua app, hotline hoặc chat.
+- **Current workflow:** (1) Cư dân gửi mô tả tự do → (2) nhân viên đọc → (3) tạo/phân loại ticket → (4) điều phối riêng lẻ → (5) quản lý xem báo cáo thủ công.
+- **Bottleneck:** Ticket mới không được nối với lịch sử cùng vị trí/chủ đề.
+- **Impact:** Sự cố lặp lại có thể bị ưu tiên thấp; cư dân phải phản ánh lại.
+- **Success metric:** Pilot ticket ẩn danh: ≥90% gắn đúng nhóm sự cố, giảm 30% thời gian triage; 100% gộp ticket do nhân viên duyệt.
+- **Non-AI alternative:** Form bắt buộc vị trí/loại sự cố, taxonomy và dashboard theo khu vực.
+- **AI hypothesis:** Chuẩn hóa mô tả tự do, đề xuất ticket tương tự và tóm tắt lịch sử để nhân viên duyệt.
+- **Quick gut:** Workflow.
 
 ```text
-Problem 1 câu:
-
-Actor:
-
-Thời điểm / bối cảnh:
-
-Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
-
-Bottleneck:
-
-Impact:
-
-Success metric:
-
-Non-AI alternative:
-
-AI hypothesis:
-
-Quick gut:
-[ ] No AI / process fix
-[ ] Rule
-[ ] Workflow
-[ ] Agent
-[ ] Chưa biết
+CURRENT: [Cư dân gửi tự do] → [Đọc] → [Tạo ticket mới] → [Điều phối riêng] → [Báo cáo thủ công] ← bottleneck
+FUTURE: [Form có field] → [Rule kiểm tra] → [AI đề xuất tương tự] → [Nhân viên duyệt/gộp] ← human boundary → [Dashboard]
+Fallback: không đủ tin cậy → tạo ticket mới; không tự gộp hoặc đóng ticket.
 ```
 
-**Draft workflow Card #2:**
+### Problem Card #3 — Giải đáp tiện ích trong phòng khách sạn
+
+**Problem 1 câu:** Khách không biết vật dụng nào tính phí hoặc cách dùng thiết bị trong phòng đúng lúc cần, nên phải tự đoán, tìm thông tin hoặc gọi lễ tân.
+
+- **Actor:** Khách lưu trú và lễ tân.
+- **Bối cảnh:** Lần đầu vào phòng hoặc khi dùng minibar, phòng tắm, điều khiển thiết bị.
+- **Current workflow:** (1) Khách có câu hỏi → (2) tìm bảng giá/booklet/QR → (3) tự đoán hoặc gọi lễ tân → (4) lễ tân tra và trả lời.
+- **Bottleneck:** Thông tin không nổi bật theo ngữ cảnh và khác nhau theo phòng/thiết bị.
+- **Impact:** Trải nghiệm khách bị gián đoạn; câu hỏi FAQ lặp lại cho lễ tân.
+- **Success metric:** 10 câu hỏi phổ biến được trả lời đúng trong dưới 1 phút; nếu có log, giảm ≥30% cuộc gọi FAQ.
+- **Non-AI alternative:** QR đúng vị trí, nhãn/bảng giá song ngữ và FAQ tìm kiếm.
+- **AI hypothesis:** Chỉ cân nhắc hỏi đáp đa ngôn ngữ trên knowledge base đã duyệt sau khi thử nhãn/FAQ.
+- **Quick gut:** No AI / Rule.
 
 ```text
-CURRENT STATE — ___ phút
-
-[1 ...] → [2 ...] → [3 ...]  <-- bottleneck
-
-FUTURE STATE — ___ phút
-
-[1 ...] → [2 ...] → [3 ... review]  <-- human boundary
-
-Fallback: ...
+CURRENT: [Khách có câu hỏi] → [Tìm booklet/nhãn] ← bottleneck → [Gọi lễ tân] → [Trả lời]
+FUTURE: [Nhãn/QR đúng vị trí] → [FAQ theo phòng/thiết bị] → [Lễ tân xử lý ngoại lệ] ← human boundary
+Fallback: thông tin phí/hướng dẫn không chắc → lễ tân xác nhận, không trả lời đoán.
 ```
 
-File đính kèm: `01-individual-problem-scan-workflow-card-2.png`
+### Card muốn pitch nhất
 
----
+**Card:** Hỗ trợ chủ xe VinFast khi có cảnh báo/lỗi.
 
-#### Problem Card #3 — [Tên problem]
+**Pitch:** Chủ xe không cần “AI technician” tự quyết. Điều cần kiểm chứng là họ có mất thời gian hiểu cảnh báo, chọn hành động an toàn và mô tả lại sự cố không. Nếu có khoảng trống, giải pháp phù hợp là workflow: rule an toàn phân nhánh trước; AI chỉ giải thích/truy xuất tài liệu đúng phiên bản và tạo handoff; kỹ thuật viên vẫn quyết định.
 
-```text
-Problem 1 câu:
+**Câu hỏi challenge:** App VinFast hiện đã có cảnh báo và đặt dịch vụ. Bằng chứng nào cho thấy lớp giải thích/handoff còn giảm được thời gian hoặc lượt hỏi lại? Nếu không đạt safety gate và baseline, có nên dừng ở rule/UX thay vì dùng AI?
 
-Actor:
+### Self-check
 
-Thời điểm / bối cảnh:
-
-Current workflow 3-7 bước:
-1.
-2.
-3.
-4.
-5.
-
-Bottleneck:
-
-Impact:
-
-Success metric:
-
-Non-AI alternative:
-
-AI hypothesis:
-
-Quick gut:
-[ ] No AI / process fix
-[ ] Rule
-[ ] Workflow
-[ ] Agent
-[ ] Chưa biết
-```
-
-**Draft workflow Card #3:**
-
-```text
-CURRENT STATE — ___ phút
-
-[1 ...] → [2 ...] → [3 ...]  <-- bottleneck
-
-FUTURE STATE — ___ phút
-
-[1 ...] → [2 ...] → [3 ... review]  <-- human boundary
-
-Fallback: ...
-```
-
-File đính kèm: `01-individual-problem-scan-workflow-card-3.png`
-
----
-
-### 2.3. Card muốn pitch nhất (chuẩn bị 2 phút)
-
-**Card tôi muốn pitch nhất:**
-
-```text
-
-```
-
-**Vì sao (2-3 câu: workflow gì, số đo gì, impact gì):**
-
-```text
-
-```
-
-**Câu hỏi tôi muốn nhóm challenge (1-2 câu hỏi đúng chỗ yếu):**
-
-```text
-
-```
-
-**AI phản biện Card (nếu có):**
-- Điểm yếu AI chỉ ra:
-- Tôi sửa gì:
-
-### Self-check nộp phần 01
-- [ ] Có 5+ problems + top 3 Cards đủ field
-- [ ] Mỗi Card có workflow trước/sau + bottleneck + metric + fallback
-- [ ] Đã chọn 1 card pitch + câu hỏi challenge
+- [x] Có 5+ problems và 3 Cards đủ field
+- [x] Mỗi Card có workflow trước/sau, bottleneck, metric, fallback
+- [x] Có card pitch và câu hỏi challenge
